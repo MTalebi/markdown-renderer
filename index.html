@@ -1,0 +1,44 @@
+<!--
+  Markdown Renderer App
+  Usage: /markdown-renderer-app/?link=URL_TO_MARKDOWN
+  Example: /markdown-renderer-app/?link=https://raw.githubusercontent.com/user/repo/main/file.md
+  Just prepend this app's URL to any markdown file link to render it beautifully.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown Renderer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.4.0/github-markdown.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.5/purify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <!-- MathJax for LaTeX rendering (with equation numbering) -->
+  <script>
+    window.MathJax = {
+      tex: {
+        tags: 'all', // number all equations
+        displayMath: [['$$','$$'], ['\\[','\\]']],
+        inlineMath: [['$','$'], ['\\(','\\)']]
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="main-content">
+    <section class="content-section">
+      <div class="container">
+        <div id="blog-post-content" class="blog-post-content markdown-body"></div>
+      </div>
+    </section>
+  </div>
+  <script src="./renderer.js"></script>
+</body>
+</html> 

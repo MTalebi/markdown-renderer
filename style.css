@@ -1,0 +1,61 @@
+:root {
+  --primary-dark: #1a1a1a;
+  --secondary-dark: #2d2d2d;
+  --accent-gray: #4a4a4a;
+  --light-gray: #e0e0e0;
+  --text-gray: #666666;
+  --white: #ffffff;
+  --accent-blue: #0066cc;
+  --markdown-bg: #ffffff;
+  --markdown-text: #24292f;
+  --markdown-border: #d0d7de;
+  --markdown-code-bg: #f6f8fa;
+  --max-width: 1200px;
+}
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--primary-dark);
+  background-color: var(--white);
+  min-height: 100vh;
+  margin: 0;
+}
+.main-content {
+  flex: 1 0 auto;
+  margin-top: 0 !important;
+  padding-top: 72px !important;
+}
+.content-section {
+  padding: 4rem 0;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.blog-post-content {
+  background: var(--markdown-bg);
+  border: 1px solid var(--markdown-border);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.markdown-body {
+  color: var(--markdown-text);
+}
+.error {
+  color: #b00020;
+  background: #fff0f0;
+  border: 1px solid #f5c2c7;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+.loading {
+  color: var(--accent-blue);
+  font-weight: 500;
+  padding: 1rem 0;
+} 
